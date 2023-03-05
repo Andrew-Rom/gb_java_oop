@@ -2,17 +2,16 @@ package Units;
 
 public class Unit {
 
-    protected String name;
-    protected float hp;
-    protected float maxHp;
+    protected int hp;
+    protected int maxHp;
     protected int move;
     protected int hit;
     protected boolean isAlive = true;
+    protected int[] position;
 
-    public Unit(String name, float hp, float maxHp, int move, int hit) {
-        this.name = name;
+    public Unit(int hp, int move, int hit) {
         this.hp = hp;
-        this.maxHp = maxHp;
+        this.maxHp = hp;
         this.move = move;
         this.hit = hit;
     }
@@ -25,12 +24,25 @@ public class Unit {
         }
     }
 
-    public void healing(float addHp) {
+    public void healing(int addHp) {
         hp = Math.min(hp + addHp, maxHp);
     }
 
     public void attack(Unit target) {
         target.getDamage(hit);
+    }
+
+    public int[] getPosition() {
+        return position;
+    }
+
+    public void setPosition(int x, int y) {
+        position[0] = x;
+        position[1] = y;
+    }
+
+    public boolean getStatus() {
+        return isAlive;
     }
 
 }
