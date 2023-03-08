@@ -1,6 +1,6 @@
 package Units;
 
-public class Bandit extends Infantry{
+public class Bandit extends Infantry {
 
     public Bandit(String name) {
         super(100, 2, 5, 10, name);

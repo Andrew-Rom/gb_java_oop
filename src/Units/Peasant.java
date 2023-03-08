@@ -1,6 +1,6 @@
 package Units;
 
-public class Peasant extends Unit{
+public class Peasant extends Unit {
 
     public Peasant(String name) {
         super(100, 1, 1, name);

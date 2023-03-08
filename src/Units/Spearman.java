@@ -1,6 +1,6 @@
 package Units;
 
-public class Spearman extends Infantry{
+public class Spearman extends Infantry {
     public Spearman(String name) {
         super(100, 1, 5, 15, name);
     }

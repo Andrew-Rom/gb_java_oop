@@ -1,6 +1,6 @@
 package Units;
 
-public abstract class Magician extends Unit{
+public abstract class Magician extends Unit {
 
     protected int mana;
     protected int magicForce;
@@ -12,11 +12,10 @@ public abstract class Magician extends Unit{
     }
 
 
-
     public void selfHealing() {
         if (hp < maxHp && (maxHp - hp) <= mana) {
-            healing(mana - (maxHp-hp));
-            mana = mana - (maxHp-hp);
+            healing(mana - (maxHp - hp));
+            mana = mana - (maxHp - hp);
         } else if (hp < maxHp && (maxHp - hp) > mana) {
             healing(mana);
             mana = 0;

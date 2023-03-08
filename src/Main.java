@@ -10,7 +10,7 @@ public class Main {
         ArrayList<Unit> teamBlack = new ArrayList<>();
         int teamSize = 10;
 
-        for (int i = 0; i < teamSize ; i++) {
+        for (int i = 0; i < teamSize; i++) {
             switch (new Random().nextInt(4)) {
                 case 0 -> {
                     teamWhite.add(new Monk(getName()));
@@ -32,13 +32,13 @@ public class Main {
         }
 
         System.out.println("White team:");
-        for (Unit unit:teamWhite) System.out.println(unit.getInfo());
+        for (Unit unit : teamWhite) System.out.println(unit.getInfo());
         System.out.println("\nBlack team:");
-        for (Unit unit:teamBlack) System.out.println(unit.getInfo());
+        for (Unit unit : teamBlack) System.out.println(unit.getInfo());
 
     }
 
-    private static String getName(){
+    private static String getName() {
         return UnitsNames.values()[new Random().nextInt(UnitsNames.values().length)].toString();
     }
 

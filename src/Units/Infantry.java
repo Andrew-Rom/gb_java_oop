@@ -1,6 +1,6 @@
 package Units;
 
-public abstract class Infantry extends Unit{
+public abstract class Infantry extends Unit {
 
     protected int weaponPower;
 
