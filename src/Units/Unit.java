@@ -1,6 +1,6 @@
 package Units;
 
-public class Unit {
+public abstract class Unit implements UnitsInterface {
 
     protected int hp;
     protected int maxHp;
@@ -8,12 +8,15 @@ public class Unit {
     protected int hit;
     protected boolean isAlive = true;
     protected int[] position;
+    protected final String NAME;
 
-    public Unit(int hp, int move, int hit) {
+
+    public Unit(int hp, int move, int hit, String name) {
         this.hp = hp;
         this.maxHp = hp;
         this.move = move;
         this.hit = hit;
+        NAME = name;
     }
 
     public void getDamage(int damage) {
@@ -24,10 +27,12 @@ public class Unit {
         }
     }
 
+    @Override
     public void healing(int addHp) {
         hp = Math.min(hp + addHp, maxHp);
     }
 
+    @Override
     public void attack(Unit target) {
         target.getDamage(hit);
     }

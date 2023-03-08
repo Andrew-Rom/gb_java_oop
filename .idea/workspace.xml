@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Created class Unit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
-    </list>
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Made 2 teams and got type of each member." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,16 +14,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="lesson1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9a9debe3-4472-480c-8395-04c2445b6f18" />
+        <option name="url" value="https://github.com/Andrew-Rom/gb_java_oop.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +79,56 @@
       <option name="project" value="LOCAL" />
       <updated>1677963180720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created classes Infantry, Bandit, Spearman, Magician, Monk, Witch, Peasant, Shooter, Sniper, XBowMan.">
+      <created>1678044230475</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678044230475</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum.">
+      <created>1678258899342</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678258899342</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added UnitInterface interface.">
+      <created>1678259274067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678259274067</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Overrode implemented methods step() and getInfo().">
+      <created>1678260673033</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678260673033</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods.">
+      <created>1678261842374</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678261842374</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added character's name">
+      <created>1678263196542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678263196542</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Made 2 teams and got type of each member.">
+      <created>1678266391225</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678266391225</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +145,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Git init" />
     <MESSAGE value="Created class Unit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created class Unit" />
+    <MESSAGE value="Created classes Infantry, Bandit, Spearman, Magician, Monk, Witch, Peasant, Shooter, Sniper, XBowMan." />
+    <MESSAGE value="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum." />
+    <MESSAGE value="Added UnitInterface interface." />
+    <MESSAGE value="Overrode implemented methods step() and getInfo()." />
+    <MESSAGE value="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods." />
+    <MESSAGE value="Added character's name" />
+    <MESSAGE value="Made 2 teams and got type of each member." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made 2 teams and got type of each member." />
   </component>
 </project>

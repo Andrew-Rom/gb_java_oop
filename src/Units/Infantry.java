@@ -1,15 +1,16 @@
 package Units;
 
-public class Infantry extends Unit{
+public abstract class Infantry extends Unit {
 
     protected int weaponPower;
 
-    public Infantry(int hp, int move, int hit, int weaponPower) {
-        super(hp, move, hit);
+    public Infantry(int hp, int move, int hit, int weaponPower, String name) {
+        super(hp, move, hit, name);
         this.weaponPower = weaponPower;
     }
 
-    public void armedAttack(Unit target) {
+    @Override
+    public void attack(Unit target) {
         target.getDamage(hit + weaponPower);
     }
 
