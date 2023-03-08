@@ -50,6 +50,4 @@ public abstract class Unit implements UnitsInterface {
         return isAlive;
     }
 
-
-
 }
