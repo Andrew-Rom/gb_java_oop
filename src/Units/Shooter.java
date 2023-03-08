@@ -1,6 +1,6 @@
 package Units;
 
-public class Shooter extends Unit {
+public abstract class Shooter extends Unit {
 
     protected int arrows;
 

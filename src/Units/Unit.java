@@ -1,6 +1,6 @@
 package Units;
 
-public class Unit {
+public abstract class Unit {
 
     protected int hp;
     protected int maxHp;

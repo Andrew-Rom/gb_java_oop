@@ -1,6 +1,6 @@
 package Units;
 
-public class Magician extends Unit{
+public abstract class Magician extends Unit{
 
     protected int mana;
     protected int magicForce;
