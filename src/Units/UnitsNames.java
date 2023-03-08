@@ -1,5 +1,5 @@
 package Units;
 
-public enum UnitNames {
+public enum UnitsNames {
     Bill, Jerry, Mary, Kate, Jack, Jennifer
 }
