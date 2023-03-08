@@ -9,7 +9,8 @@ public abstract class Infantry extends Unit{
         this.weaponPower = weaponPower;
     }
 
-    public void armedAttack(Unit target) {
+    @Override
+    public void attack(Unit target) {
         target.getDamage(hit + weaponPower);
     }
 

@@ -5,4 +5,7 @@ public interface UnitsInterface {
 
     String getInfo();
 
+    void healing(int addHp);
+
+    void attack(Unit target);
 }

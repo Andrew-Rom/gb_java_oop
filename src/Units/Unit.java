@@ -24,10 +24,12 @@ public abstract class Unit implements UnitsInterface {
         }
     }
 
+    @Override
     public void healing(int addHp) {
         hp = Math.min(hp + addHp, maxHp);
     }
 
+    @Override
     public void attack(Unit target) {
         target.getDamage(hit);
     }
@@ -44,7 +46,5 @@ public abstract class Unit implements UnitsInterface {
     public boolean getStatus() {
         return isAlive;
     }
-
-
 
 }

@@ -9,7 +9,8 @@ public abstract class Shooter extends Unit {
         this.arrows = arrows;
     }
 
-    public void shooting(Unit target) {
+    @Override
+    public void attack(Unit target) {
         if (arrows > 0) target.getDamage(hit);
     }
 

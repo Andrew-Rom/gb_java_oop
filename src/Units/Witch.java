@@ -6,12 +6,13 @@ public class Witch extends Magician{
         super(100, 1, 5, 50, 10);
     }
 
-    public void magicAttack (Unit target) {
+    @Override
+    public void attack(Unit target) {
         if (mana >= magicForce) {
             target.getDamage(hit + magicForce);
             mana = mana - magicForce;
         } else {
-            attack(target);
+            super.attack(target);
         }
     }
 
