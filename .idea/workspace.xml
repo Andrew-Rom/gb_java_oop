@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Overrode implemented methods step() and getInfo().">
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Magician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/UnitsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/UnitsInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/XBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/XBowMan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678260673033</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods.">
+      <created>1678261842374</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678261842374</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +148,7 @@
     <MESSAGE value="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum." />
     <MESSAGE value="Added UnitInterface interface." />
     <MESSAGE value="Overrode implemented methods step() and getInfo()." />
-    <option name="LAST_COMMIT_MESSAGE" value="Overrode implemented methods step() and getInfo()." />
+    <MESSAGE value="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods." />
   </component>
 </project>

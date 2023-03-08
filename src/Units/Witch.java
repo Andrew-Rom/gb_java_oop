@@ -2,8 +2,8 @@ package Units;
 
 public class Witch extends Magician{
 
-    public Witch() {
-        super(100, 1, 5, 50, 10);
+    public Witch(String name) {
+        super(100, 1, 5, 50, 10, name);
     }
 
     @Override

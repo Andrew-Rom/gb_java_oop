@@ -4,8 +4,8 @@ public abstract class Shooter extends Unit {
 
     protected int arrows;
 
-    public Shooter(int hp, int move, int hit, int arrows) {
-        super(hp, move, hit);
+    public Shooter(int hp, int move, int hit, int arrows, String name) {
+        super(hp, move, hit, name);
         this.arrows = arrows;
     }
 

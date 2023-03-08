@@ -1,8 +1,8 @@
 package Units;
 
 public class Spearman extends Infantry{
-    public Spearman() {
-        super(100, 1, 5, 15);
+    public Spearman(String name) {
+        super(100, 1, 5, 15, name);
     }
 
     @Override

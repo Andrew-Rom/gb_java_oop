@@ -2,8 +2,8 @@ package Units;
 
 public class Peasant extends Unit{
 
-    public Peasant() {
-        super(100, 1, 1);
+    public Peasant(String name) {
+        super(100, 1, 1, name);
     }
 
     @Override

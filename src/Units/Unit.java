@@ -8,12 +8,15 @@ public abstract class Unit implements UnitsInterface {
     protected int hit;
     protected boolean isAlive = true;
     protected int[] position;
+    protected final String NAME;
 
-    public Unit(int hp, int move, int hit) {
+
+    public Unit(int hp, int move, int hit, String name) {
         this.hp = hp;
         this.maxHp = hp;
         this.move = move;
         this.hit = hit;
+        NAME = name;
     }
 
     public void getDamage(int damage) {
@@ -46,5 +49,7 @@ public abstract class Unit implements UnitsInterface {
     public boolean getStatus() {
         return isAlive;
     }
+
+
 
 }

@@ -2,8 +2,8 @@ package Units;
 
 public class Monk extends Magician{
 
-    public Monk() {
-        super(100, 1, 7, 100, 10);
+    public Monk(String name) {
+        super(100, 1, 7, 100, 10, name);
     }
 
     public void healHero (Unit target) {
