@@ -16,4 +16,13 @@ public class Monk extends Magician{
         }
     }
 
+    @Override
+    public void step() {
+        System.out.println("The Monk made a step.");
+    }
+
+    @Override
+    public String getInfo() {
+        return "Monk";
+    }
 }

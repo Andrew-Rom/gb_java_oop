@@ -1,6 +1,6 @@
 package Units;
 
-public abstract class Unit {
+public abstract class Unit implements UnitsInterface {
 
     protected int hp;
     protected int maxHp;
@@ -44,5 +44,7 @@ public abstract class Unit {
     public boolean getStatus() {
         return isAlive;
     }
+
+
 
 }

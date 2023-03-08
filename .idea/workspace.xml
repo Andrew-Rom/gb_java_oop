@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum." />
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Added UnitInterface interface.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/XBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/XBowMan.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +25,7 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -25,6 +36,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9a9debe3-4472-480c-8395-04c2445b6f18" />
+        <option name="url" value="https://github.com/Andrew-Rom/gb_java_oop.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678258899342</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added UnitInterface interface.">
+      <created>1678259274067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678259274067</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +129,7 @@
     <MESSAGE value="Created class Unit" />
     <MESSAGE value="Created classes Infantry, Bandit, Spearman, Magician, Monk, Witch, Peasant, Shooter, Sniper, XBowMan." />
     <MESSAGE value="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum." />
-    <option name="LAST_COMMIT_MESSAGE" value="Classes Unit, Infantry, Magician and Shooter became abstract. Added UnitNames enum." />
+    <MESSAGE value="Added UnitInterface interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added UnitInterface interface." />
   </component>
 </project>

@@ -15,4 +15,13 @@ public class Witch extends Magician{
         }
     }
 
+    @Override
+    public void step() {
+        System.out.println("The Witch made a step.");
+    }
+
+    @Override
+    public String getInfo() {
+        return "Witch";
+    }
 }
