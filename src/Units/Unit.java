@@ -4,17 +4,17 @@ public abstract class Unit implements UnitsInterface {
 
     protected int hp;
     protected int maxHp;
-    protected int move;
+    protected int speed;
     protected int hit;
     protected boolean isAlive = true;
     protected int[] position;
     protected final String NAME;
 
 
-    public Unit(int hp, int move, int hit, String name) {
+    public Unit(int hp, int speed, int hit, String name) {
         this.hp = hp;
         this.maxHp = hp;
-        this.move = move;
+        this.speed = speed;
         this.hit = hit;
         NAME = name;
     }
@@ -50,4 +50,11 @@ public abstract class Unit implements UnitsInterface {
         return isAlive;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
+    public String getNAME() {
+        return NAME;
+    }
 }

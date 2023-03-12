@@ -1,6 +1,7 @@
 import Units.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Random;
 
 public class Main {
@@ -31,10 +32,25 @@ public class Main {
             }
         }
 
-        System.out.println("White team:");
-        for (Unit unit : teamWhite) System.out.println(unit.getInfo());
-        System.out.println("\nBlack team:");
-        for (Unit unit : teamBlack) System.out.println(unit.getInfo());
+//        System.out.println("White team:");
+//        for (Unit unit : teamWhite) System.out.println(unit.getInfo());
+//        System.out.println("\nBlack team:");
+//        for (Unit unit : teamBlack) System.out.println(unit.getInfo());
+
+        ArrayList<Unit> teams = new ArrayList<>();
+        teams.addAll(teamBlack);
+        teams.addAll(teamWhite);
+
+        for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
+        System.out.println("-------------------------------");
+        teams.sort(new Comparator<Unit>() {
+            @Override
+            public int compare(Unit o1, Unit o2) {
+                return o1.getSpeed() - o2.getSpeed();
+            }
+        });
+
+        for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
 
     }
 

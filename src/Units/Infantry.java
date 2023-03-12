@@ -4,8 +4,8 @@ public abstract class Infantry extends Unit {
 
     protected int weaponPower;
 
-    public Infantry(int hp, int move, int hit, int weaponPower, String name) {
-        super(hp, move, hit, name);
+    public Infantry(int hp, int speed, int hit, int weaponPower, String name) {
+        super(hp, speed, hit, name);
         this.weaponPower = weaponPower;
     }
 

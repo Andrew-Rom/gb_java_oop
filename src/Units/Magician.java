@@ -5,8 +5,8 @@ public abstract class Magician extends Unit {
     protected int mana;
     protected int magicForce;
 
-    public Magician(int hp, int move, int hit, int mana, int magicForce, String name) {
-        super(hp, move, hit, name);
+    public Magician(int hp, int speed, int hit, int mana, int magicForce, String name) {
+        super(hp, speed, hit, name);
         this.mana = mana;
         this.magicForce = magicForce;
     }
