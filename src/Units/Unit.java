@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 public abstract class Unit implements UnitsInterface {
 
     protected int hp;
@@ -33,8 +35,15 @@ public abstract class Unit implements UnitsInterface {
     }
 
     @Override
-    public void attack(Unit target) {
-        target.getDamage(hit);
+    public void attack(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        if (isAlive) {
+            for (Unit target : targets) {
+                System.out.println(target.getNAME() + " (Hp = " + target.getHp() + ") is under attack.");
+                target.getDamage(hit);
+                System.out.println("Unit " + NAME + " attacked.");
+                System.out.println(target.getNAME() + " (Hp after attack = " + target.getHp() + ").");
+            }
+        }
     }
 
     public int[] getPosition() {
@@ -46,7 +55,7 @@ public abstract class Unit implements UnitsInterface {
         position[1] = y;
     }
 
-    public boolean getStatus() {
+    public boolean isAlive() {
         return isAlive;
     }
 
@@ -57,4 +66,9 @@ public abstract class Unit implements UnitsInterface {
     public String getNAME() {
         return NAME;
     }
+
+    public int getHp() {
+        return hp;
+    }
+
 }

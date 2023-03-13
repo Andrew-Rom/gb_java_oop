@@ -42,7 +42,7 @@ public class Main {
         teams.addAll(teamWhite);
 
         for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
-        System.out.println("-------------------------------");
+
         teams.sort(new Comparator<Unit>() {
             @Override
             public int compare(Unit o1, Unit o2) {
@@ -51,6 +51,13 @@ public class Main {
         });
 
         for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
+
+
+        System.out.println("Attacks");
+        System.out.println("White team:");
+        teamWhite.forEach(unit -> unit.attack(teamWhite, teamBlack));
+        System.out.println("White team:");
+        teamBlack.forEach(unit -> unit.attack(teamBlack, teamWhite));
 
     }
 

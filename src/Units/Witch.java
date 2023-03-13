@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Witch extends Magician {
 
     public Witch(String name) {
@@ -7,12 +9,19 @@ public class Witch extends Magician {
     }
 
     @Override
-    public void attack(Unit target) {
-        if (mana >= magicForce) {
-            target.getDamage(hit + magicForce);
-            mana = mana - magicForce;
-        } else {
-            super.attack(target);
+    public void attack(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        if ((mana >= magicForce) && isAlive) {
+            for (Unit target : targets) {
+                if (target.isAlive()) {
+                    int temp = target.getHp();
+                    System.out.println(target.getNAME() + " (Hp = " + target.getHp() + ") is under attack.");
+                    target.getDamage(hit + magicForce);
+                    mana = mana - magicForce;
+                    System.out.println("Unit " + NAME + " attacked.");
+                    System.out.println(target.getNAME() + " (Hp after attack = " + target.getHp() + ").");
+                    if ((target.getHp() - temp) < 0) break;
+                }
+            }
         }
     }
 

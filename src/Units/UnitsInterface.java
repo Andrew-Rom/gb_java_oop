@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 public interface UnitsInterface {
     void step();
 
@@ -7,5 +9,5 @@ public interface UnitsInterface {
 
     void healing(int addHp);
 
-    void attack(Unit target);
+    void attack(ArrayList<Unit> attackers, ArrayList<Unit> target);
 }

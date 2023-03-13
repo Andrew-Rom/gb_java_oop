@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Peasant extends Unit {
 
     public Peasant(String name) {
@@ -15,4 +17,5 @@ public class Peasant extends Unit {
     public String getInfo() {
         return "Peasant";
     }
+
 }
