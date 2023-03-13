@@ -34,7 +34,7 @@ public abstract class Shooter extends Unit implements UnitsInterface {
             for (Unit unit : attackers) {
                 if (unit.getInfo().equals("Peasant")) {
                     arrows++;
-                    System.out.println(attacker);
+                    System.out.println("Recharged > " + attacker);
                     break;
                 }
             }
