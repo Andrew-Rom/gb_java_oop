@@ -3,12 +3,7 @@ package Units;
 public class Sniper extends Shooter {
 
     public Sniper(String name) {
-        super(100, 2, 15, 10, name);
-    }
-
-    @Override
-    public void step() {
-        System.out.println("The Sniper made a step.");
+        super(15, 9, 10, 12, name, 32, 2, 4);
     }
 
     @Override

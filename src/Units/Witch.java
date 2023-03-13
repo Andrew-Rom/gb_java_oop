@@ -1,23 +1,16 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Witch extends Magician {
 
-    public Witch(String name) {
-        super(100, 1, 5, 50, 10, name);
+    public Witch (String name) {
+        super(30, 9, 12, 17, 5, name);
     }
 
-    @Override
-    public void attack(Unit target) {
-        if (mana >= magicForce) {
-            target.getDamage(hit + magicForce);
-            mana = mana - magicForce;
-        } else {
-            super.attack(target);
-        }
-    }
 
     @Override
-    public void step() {
+    public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         System.out.println("The Witch made a step.");
     }
 

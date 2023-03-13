@@ -4,17 +4,18 @@ public abstract class Unit implements UnitsInterface {
 
     protected int hp;
     protected int maxHp;
-    protected int move;
+    protected int speed;
+    protected int armor;
     protected int hit;
     protected boolean isAlive = true;
-    protected int[] position;
     protected final String NAME;
 
 
-    public Unit(int hp, int move, int hit, String name) {
+    public Unit(int hp, int speed, int armor, int hit, String name) {
         this.hp = hp;
         this.maxHp = hp;
-        this.move = move;
+        this.speed = speed;
+        this.armor = armor;
         this.hit = hit;
         NAME = name;
     }
@@ -32,22 +33,34 @@ public abstract class Unit implements UnitsInterface {
         hp = Math.min(hp + addHp, maxHp);
     }
 
-    @Override
-    public void attack(Unit target) {
-        target.getDamage(hit);
-    }
-
-    public int[] getPosition() {
-        return position;
-    }
-
-    public void setPosition(int x, int y) {
-        position[0] = x;
-        position[1] = y;
-    }
-
-    public boolean getStatus() {
+    public boolean isAlive() {
         return isAlive;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public String getNAME() {
+        return NAME;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getArmor() {
+        return armor;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s (HP: %d/%d; attack: %d; armor: %d)", NAME, hp, maxHp, hit, armor);
+    }
+
+    @Override
+    public int compare(Unit o1, Unit o2) {
+        return o1.getSpeed() - o2.getSpeed();
     }
 
 }

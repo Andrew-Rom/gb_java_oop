@@ -2,23 +2,27 @@ package Units;
 
 public abstract class Magician extends Unit {
 
-    protected int mana;
-    protected int magicForce;
+    protected boolean mana;
+    protected int getDamage;
 
-    public Magician(int hp, int move, int hit, int mana, int magicForce, String name) {
-        super(hp, move, hit, name);
-        this.mana = mana;
-        this.magicForce = magicForce;
+    public Magician(int hp, int speed, int armor, int hit, int getDamage, String name) {
+        super(hp, speed, armor, hit, name);
+        this.mana = true;
+        this.getDamage = getDamage;
     }
 
+    public boolean isMana() {
+        return mana;
+    }
 
-    public void selfHealing() {
-        if (hp < maxHp && (maxHp - hp) <= mana) {
-            healing(mana - (maxHp - hp));
-            mana = mana - (maxHp - hp);
-        } else if (hp < maxHp && (maxHp - hp) > mana) {
-            healing(mana);
-            mana = 0;
+    public int getGetDamage() {
+        return getDamage;
+    }
+
+    public void healHero(Unit target) {
+        if (mana) {
+            target.healing(hit);
+            mana = false;
         }
     }
 
