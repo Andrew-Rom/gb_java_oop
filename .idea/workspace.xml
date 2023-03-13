@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Modded attack methods">
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Modded attack methods and output results after attacks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Magician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/UnitsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/UnitsInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/XBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/XBowMan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678685336745</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Modded attack methods and output results after attacks.">
+      <created>1678724846793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678724846793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Modded attack methods and output results after attacks.">
+      <created>1678725025499</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678725025499</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +211,7 @@
     <MESSAGE value="Added parameter move became speed" />
     <MESSAGE value="Added parameter move became speed. Sorted teams comparing units speed." />
     <MESSAGE value="Modded attack methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modded attack methods" />
+    <MESSAGE value="Modded attack methods and output results after attacks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modded attack methods and output results after attacks." />
   </component>
 </project>

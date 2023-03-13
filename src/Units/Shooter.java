@@ -5,36 +5,46 @@ import java.util.ArrayList;
 public abstract class Shooter extends Unit implements UnitsInterface {
 
     protected int arrows;
+    public int causeDamage;
+    protected int getDamage;
 
-    public Shooter(int hp, int speed, int hit, int arrows, String name) {
-        super(hp, speed, hit, name);
+    public Shooter(int hp, int speed, int armor, int hit, String name, int arrows, int causeDamage, int getDamage) {
+        super(hp, speed, armor, hit, name);
         this.arrows = arrows;
+        this.causeDamage = causeDamage;
+        this.getDamage = getDamage;
     }
+
 
     public int getArrows() {
         return arrows;
     }
 
     @Override
-    public void attack(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        for (Unit attacker: attackers) {
-            if ((arrows > 0) && attacker.isAlive()) {
-                System.out.println("Attacker > " + attacker);
-                for (Unit target : targets) {
-                    if (target.isAlive()) {
-                        int temp = target.getHp();
-                        System.out.println("Target > " + target);
-                        target.getDamage(hit);
-                        arrows--;
-                        System.out.println("Result:\nattacker > " + attacker + "\ntarget > " + target);
-                        if ((target.getHp() - temp) < 0) break;
+    public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        if ((arrows > 0) && isAlive) {
+            for (Unit target : targets) {
+                if (target.isAlive()) {
+                    System.out.println("Attacker > " + this);
+                    System.out.println("Target > " + target + " - " + target.getInfo());
+                    if (target.getArmor() < hit) target.getDamage(hit - target.getArmor());
+                    arrows--;
+                    for (Unit unit : attackers) {
+                        if (unit.getInfo().equals("Peasant")) {
+                            Peasant deliver = (Peasant) unit;
+                            if (deliver.getDelivery()) {
+                                arrows++;
+                                System.out.println("Recharged successfully by " + deliver.getNAME());
+                                deliver.hasDelivery = false;
+                                break;
+                            }
+                        }
                     }
-                }
-            }
-            for (Unit unit : attackers) {
-                if (unit.getInfo().equals("Peasant")) {
-                    arrows++;
-                    System.out.println("Recharged > " + attacker);
+                    if (target.isAlive()) {
+                        System.out.println("Result: attacker > " + this + " target > " + target + "\n");
+                    } else {
+                        System.out.println("Result: attacker > " + this + " target > " + target.getNAME() + " was killed.\n");
+                    }
                     break;
                 }
             }
@@ -42,15 +52,8 @@ public abstract class Shooter extends Unit implements UnitsInterface {
     }
 
     @Override
-    public void step() {
-        if (arrows > 0 && isAlive) {
-            System.out.println(NAME + " ready to shoot");
-        }
-    }
-
-    @Override
     public String toString() {
-        return String.format("Name: %s HP: %d/%d Arrows: %d.", NAME, hp, maxHp, arrows);
+        return String.format("Name: %s (HP: %d/%d; attack: %d; armor: %d; arrows: %d)", NAME, hp, maxHp, hit, armor, arrows);
     }
 
 }

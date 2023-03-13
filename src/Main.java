@@ -1,8 +1,6 @@
 import Units.*;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,8 +16,8 @@ public class Main {
                     teamBlack.add(new Witch(getName()));
                 }
                 case 1 -> {
-                    teamWhite.add(new Sniper(getName()));
-                    teamBlack.add(new XBowMan(getName()));
+                    teamWhite.add(new XBowMan(getName()));
+                    teamBlack.add(new Sniper(getName()));
                 }
                 case 2 -> {
                     teamWhite.add(new Spearman(getName()));
@@ -32,32 +30,28 @@ public class Main {
             }
         }
 
-//        System.out.println("White team:");
-//        for (Unit unit : teamWhite) System.out.println(unit.getInfo());
-//        System.out.println("\nBlack team:");
-//        for (Unit unit : teamBlack) System.out.println(unit.getInfo());
-
         ArrayList<Unit> teams = new ArrayList<>();
         teams.addAll(teamBlack);
         teams.addAll(teamWhite);
-
-        for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
-
+        for (Unit unit:teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed());
         teams.sort(new Comparator<Unit>() {
             @Override
             public int compare(Unit o1, Unit o2) {
                 return o1.getSpeed() - o2.getSpeed();
             }
         });
+        System.out.println("\nSorted");
+        for (Unit unit:teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed());
 
-        for (Unit unit:teams) System.out.println(unit.getNAME() + " - " + unit.getSpeed());
-
-
-        System.out.println("Attacks");
-        System.out.println("White team:");
-        teamWhite.forEach(unit -> unit.attack(teamWhite, teamBlack));
-        System.out.println("White team:");
-        teamBlack.forEach(unit -> unit.attack(teamBlack, teamWhite));
+        System.out.println("\nBattlefield");
+        System.out.println("\nWhite team is attacking:");
+        for (Unit unitWhite:teamWhite) {
+            unitWhite.step(teamWhite, teamBlack);
+        }
+        System.out.println("\nBlack team is attacking:");
+        for (Unit unitBlack:teamBlack) {
+            unitBlack.step(teamBlack, teamWhite);
+        }
 
     }
 
