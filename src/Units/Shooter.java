@@ -11,23 +11,30 @@ public abstract class Shooter extends Unit implements UnitsInterface {
         this.arrows = arrows;
     }
 
+    public int getArrows() {
+        return arrows;
+    }
+
     @Override
     public void attack(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        if ((arrows > 0) && isAlive) {
-            for (Unit target : targets) {
-                if (target.isAlive()) {
-                    int temp = target.getHp();
-                    System.out.println(target.getNAME() + " (Hp = " + target.getHp() + ") is under attack.");
-                    target.getDamage(hit);
-                    arrows--;
-                    System.out.println("Unit " + NAME + " attacked.");
-                    System.out.println(target.getNAME() + " (Hp after attack = " + target.getHp() + ").");
-                    if ((target.getHp() - temp) < 0) break;
+        for (Unit attacker: attackers) {
+            if ((arrows > 0) && attacker.isAlive()) {
+                System.out.println("Attacker > " + attacker);
+                for (Unit target : targets) {
+                    if (target.isAlive()) {
+                        int temp = target.getHp();
+                        System.out.println("Target > " + target);
+                        target.getDamage(hit);
+                        arrows--;
+                        System.out.println("Result:\nattacker > " + attacker + "\ntarget > " + target);
+                        if ((target.getHp() - temp) < 0) break;
+                    }
                 }
             }
-            for (Unit attacker : attackers) {
-                if (attacker.getInfo().equals("Peasant")) {
+            for (Unit unit : attackers) {
+                if (unit.getInfo().equals("Peasant")) {
                     arrows++;
+                    System.out.println(attacker);
                     break;
                 }
             }
@@ -40,4 +47,10 @@ public abstract class Shooter extends Unit implements UnitsInterface {
             System.out.println(NAME + " ready to shoot");
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s HP: %d/%d Arrows: %d.", NAME, hp, maxHp, arrows);
+    }
+
 }

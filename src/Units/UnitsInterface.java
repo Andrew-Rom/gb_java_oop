@@ -10,4 +10,6 @@ public interface UnitsInterface {
     void healing(int addHp);
 
     void attack(ArrayList<Unit> attackers, ArrayList<Unit> target);
+
+    int compare(Unit o1, Unit o2);
 }

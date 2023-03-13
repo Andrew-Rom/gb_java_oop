@@ -36,12 +36,18 @@ public abstract class Unit implements UnitsInterface {
 
     @Override
     public void attack(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        if (isAlive) {
-            for (Unit target : targets) {
-                System.out.println(target.getNAME() + " (Hp = " + target.getHp() + ") is under attack.");
-                target.getDamage(hit);
-                System.out.println("Unit " + NAME + " attacked.");
-                System.out.println(target.getNAME() + " (Hp after attack = " + target.getHp() + ").");
+        for (Unit attacker:attackers) {
+            if (attacker.isAlive()) {
+                System.out.println("Attacker > " + attacker);
+                for (Unit target : targets) {
+                    if (target.isAlive()) {
+                        int temp = target.getHp();
+                        System.out.println("Target > " + target);
+                        target.getDamage(hit);
+                        System.out.println("Result:\nattacker > " + attacker + "\ntarget > " + target);
+                        if ((target.getHp() - temp) < 0) break;
+                    }
+                }
             }
         }
     }
@@ -70,5 +76,16 @@ public abstract class Unit implements UnitsInterface {
     public int getHp() {
         return hp;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s HP: %d/%d.", NAME, hp, maxHp);
+    }
+
+    @Override
+    public int compare(Unit o1, Unit o2) {
+        return o1.getSpeed() - o2.getSpeed();
+    }
+
 
 }
