@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Monk extends Magician {
 
-    public Monk(String name) {
-        super(30, 5, 7, 12, 4, name);
+    public Monk(String name, int x, int y) {
+        super(30, 5, 7, 12, 4, name, x, y);
     }
 
 

@@ -8,8 +8,8 @@ public abstract class Shooter extends Unit implements UnitsInterface {
     public int causeDamage;
     protected int getDamage;
 
-    public Shooter(int hp, int speed, int armor, int hit, String name, int arrows, int causeDamage, int getDamage) {
-        super(hp, speed, armor, hit, name);
+    public Shooter(int hp, int speed, int armor, int hit, String name, int arrows, int causeDamage, int getDamage, int x, int y) {
+        super(hp, speed, armor, hit, name, x, y);
         this.arrows = arrows;
         this.causeDamage = causeDamage;
         this.getDamage = getDamage;
