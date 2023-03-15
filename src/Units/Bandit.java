@@ -12,7 +12,7 @@ public class Bandit extends Infantry {
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> target) {
-        System.out.println("The Bandit made a step.");
+        if (isAlive) System.out.println("The Bandit made a step.");
     }
 
     @Override

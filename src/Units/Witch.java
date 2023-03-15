@@ -11,7 +11,7 @@ public class Witch extends Magician {
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        System.out.println("The Witch made a step.");
+        if (isAlive) System.out.println("The Witch made a step.");
     }
 
     @Override

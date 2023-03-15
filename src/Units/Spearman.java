@@ -16,7 +16,7 @@ public class Spearman extends Infantry {
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> target) {
-        System.out.println("The Spearman made a step.");
+        if (isAlive) System.out.println("The Spearman made a step.");
     }
 
     @Override

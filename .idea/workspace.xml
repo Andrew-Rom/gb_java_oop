@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Lesson4">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Changed overriding of methods toString. Added method hitPower (choosing hit power according to distance to target). Changed cause damage values.">
       <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/XBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/XBowMan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678820637452</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changed overriding of methods toString. Added method hitPower (choosing hit power according to distance to target). Changed cause damage values.">
+      <created>1678912628236</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678912628236</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +228,7 @@
     <MESSAGE value="Modded attack methods" />
     <MESSAGE value="Modded attack methods and output results after attacks." />
     <MESSAGE value="Lesson4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson4" />
+    <MESSAGE value="Changed overriding of methods toString. Added method hitPower (choosing hit power according to distance to target). Changed cause damage values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed overriding of methods toString. Added method hitPower (choosing hit power according to distance to target). Changed cause damage values." />
   </component>
 </project>
