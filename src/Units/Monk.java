@@ -18,4 +18,10 @@ public class Monk extends Magician {
     public String getInfo() {
         return "Monk";
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "; type: Monk";
+    }
+
 }

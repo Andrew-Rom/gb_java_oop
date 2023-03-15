@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Witch extends Magician {
 
-    public Witch (String name, int x, int y) {
+    public Witch(String name, int x, int y) {
         super(30, 9, 12, 17, 5, name, x, y);
     }
 
@@ -18,4 +18,10 @@ public class Witch extends Magician {
     public String getInfo() {
         return "Witch";
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "; type: Witch";
+    }
+
 }

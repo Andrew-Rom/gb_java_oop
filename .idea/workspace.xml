@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Lesson4">
-      <change afterPath="$PROJECT_DIR$/src/Units/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Magician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magician.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
@@ -76,7 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -193,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678740174156</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Lesson4">
+      <created>1678820637452</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678820637452</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

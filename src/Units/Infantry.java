@@ -5,12 +5,10 @@ import java.util.ArrayList;
 public abstract class Infantry extends Unit {
 
     public int causeDamage;
-    protected int getDamage;
 
-    public Infantry(int hp, int speed, int armor, int hit, String name, int causeDamage, int getDamage, int x, int y) {
+    public Infantry(int hp, int speed, int armor, int hit, String name, int causeDamage, int x, int y) {
         super(hp, speed, armor, hit, name, x, y);
         this.causeDamage = causeDamage;
-        this.getDamage = getDamage;
     }
 
 //    @Override

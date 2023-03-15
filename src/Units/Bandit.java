@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Bandit extends Infantry {
 
 
-    public Bandit (String name, int x, int y) {
-        super(10, 6, 3, 8, name, 2, 4, x, y);
+    public Bandit(String name, int x, int y) {
+        super(10, 6, 3, 8, name, 2, x, y);
     }
 
 
@@ -19,4 +19,10 @@ public class Bandit extends Infantry {
     public String getInfo() {
         return "Bandit";
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "; type: Bandit";
+    }
+
 }

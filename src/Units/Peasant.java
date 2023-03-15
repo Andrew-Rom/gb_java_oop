@@ -33,4 +33,9 @@ public class Peasant extends Unit {
         return "Peasant";
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "; type: Peasant";
+    }
+
 }

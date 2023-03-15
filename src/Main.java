@@ -30,31 +30,31 @@ public class Main {
             }
         }
 
-        ArrayList<Unit> teams = new ArrayList<>();
-        teams.addAll(teamBlack);
-        teams.addAll(teamWhite);
-//        for (Unit unit : teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed());
-        teams.sort(new Comparator<Unit>() {
-            @Override
-            public int compare(Unit o1, Unit o2) {
-                return o1.getSpeed() - o2.getSpeed();
-            }
-        });
-        System.out.println("\nSorted");
-        for (Unit unit : teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed() + unit.getPosition());
+//        ArrayList<Unit> teams = new ArrayList<>();
+//        teams.addAll(teamBlack);
+//        teams.addAll(teamWhite);
+////        for (Unit unit : teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed());
+//        teams.sort(new Comparator<Unit>() {
+//            @Override
+//            public int compare(Unit o1, Unit o2) {
+//                return o1.getSpeed() - o2.getSpeed();
+//            }
+//        });
+//        System.out.println("\nSorted");
+//        for (Unit unit : teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed() + unit.getPosition());
 
 
 
 
-//        System.out.println("\nBattlefield");
-//        System.out.println("\nWhite team is attacking:");
-//        for (Unit unitWhite : teamWhite) {
-//            unitWhite.step(teamWhite, teamBlack);
-//        }
-//        System.out.println("\nBlack team is attacking:");
-//        for (Unit unitBlack : teamBlack) {
-//            unitBlack.step(teamBlack, teamWhite);
-//        }
+        System.out.println("\nBattlefield");
+        System.out.println("\nWhite team is attacking:");
+        for (Unit unitWhite : teamWhite) {
+            unitWhite.step(teamWhite, teamBlack);
+        }
+        System.out.println("\nBlack team is attacking:");
+        for (Unit unitBlack : teamBlack) {
+            unitBlack.step(teamBlack, teamWhite);
+        }
 
     }
 

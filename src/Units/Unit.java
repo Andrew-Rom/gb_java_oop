@@ -64,7 +64,7 @@ public abstract class Unit implements UnitsInterface {
 
     @Override
     public String toString() {
-        return String.format("Name: %s (HP: %d/%d; attack: %d; armor: %d)", NAME, hp, maxHp, hit, armor);
+        return String.format("Name: %s = HP: %d/%d; armor: %d", NAME, hp, maxHp, armor);
     }
 
     @Override
