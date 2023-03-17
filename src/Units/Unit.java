@@ -12,6 +12,7 @@ public abstract class Unit implements UnitsInterface {
     protected boolean isAlive = true;
     protected final String NAME;
     protected Position position;
+    protected String type = "Type";
 
 
     public Unit(int hp, int speed, int armor, int hit, String name, int x, int y) {
@@ -30,6 +31,10 @@ public abstract class Unit implements UnitsInterface {
         } else {
             isAlive = false;
         }
+    }
+
+    public Position getPos() {
+        return position;
     }
 
     @Override
@@ -64,7 +69,9 @@ public abstract class Unit implements UnitsInterface {
 
     @Override
     public String toString() {
-        return String.format("Name: %s = HP: %d/%d; armor: %d", NAME, hp, maxHp, armor);
+        //return String.format("Name: %s = HP: %d/%d; armor: %d", NAME, hp, maxHp, armor);
+        String outStr = String.format("\t%-3s\t⚔️ %-3d\t\uD83D\uDEE1 %-3d\t♥️%-3d%%\t☠️%-3d\t        ", type, hit,armor,(int) hp * 100/maxHp,(5 + 3)/2);
+        return outStr;
     }
 
     @Override
@@ -84,5 +91,7 @@ public abstract class Unit implements UnitsInterface {
         }
         return team.get(index);
     }
+
+
 
 }

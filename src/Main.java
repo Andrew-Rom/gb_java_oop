@@ -1,31 +1,32 @@
 import Units.*;
-
 import java.util.*;
 
 public class Main {
+
+    public static final int GANG_SIZE = 10;
+    public static ArrayList<Unit> teamWhite = new ArrayList<>();
+    public static ArrayList<Unit> teamBlack = new ArrayList<>();
+
     public static void main(String[] args) {
 
-        ArrayList<Unit> teamWhite = new ArrayList<>();
-        ArrayList<Unit> teamBlack = new ArrayList<>();
-        int teamSize = 10;
 
-        for (int i = 0; i < teamSize; i++) {
+        for (int i = 1; i < GANG_SIZE + 1; i++) {
             switch (new Random().nextInt(4)) {
                 case 0 -> {
-                    teamWhite.add(new Monk(getName(), 9, i));
-                    teamBlack.add(new Witch(getName(), 0, i));
+                    teamWhite.add(new Monk(getName(), 10, i));
+                    teamBlack.add(new Witch(getName(), 1, i));
                 }
                 case 1 -> {
-                    teamWhite.add(new XBowMan(getName(), 9, i));
-                    teamBlack.add(new Sniper(getName(),0,i));
+                    teamWhite.add(new XBowMan(getName(), 10, i));
+                    teamBlack.add(new Sniper(getName(),1,i));
                 }
                 case 2 -> {
-                    teamWhite.add(new Spearman(getName(),9, i));
-                    teamBlack.add(new Bandit(getName(), 0, i));
+                    teamWhite.add(new Spearman(getName(),10, i));
+                    teamBlack.add(new Bandit(getName(), 1, i));
                 }
                 default -> {
-                    teamWhite.add(new Peasant(getName(), 9, i));
-                    teamBlack.add(new Peasant(getName(), 0, i));
+                    teamWhite.add(new Peasant(getName(), 10, i));
+                    teamBlack.add(new Peasant(getName(), 1, i));
                 }
             }
         }
@@ -44,16 +45,17 @@ public class Main {
 //        for (Unit unit : teams) System.out.println(unit + " - " + unit.getInfo() + " > speed: " + unit.getSpeed() + unit.getPosition());
 
 
+//
+//
 
-
-        System.out.println("\nBattlefield");
-        System.out.println("\nWhite team is attacking:");
-        for (Unit unitWhite : teamWhite) {
-            unitWhite.step(teamWhite, teamBlack);
-        }
-        System.out.println("\nBlack team is attacking:");
-        for (Unit unitBlack : teamBlack) {
-            unitBlack.step(teamBlack, teamWhite);
+        while (ConsoleView.step < 10) {
+            ConsoleView.view();
+            for (Unit unitWhite : teamWhite) {
+                unitWhite.step(teamWhite, teamBlack);
+            }
+            for (Unit unitBlack : teamBlack) {
+                unitBlack.step(teamBlack, teamWhite);
+            }
         }
 
     }
@@ -61,5 +63,7 @@ public class Main {
     private static String getName() {
         return UnitsNames.values()[new Random().nextInt(UnitsNames.values().length)].toString();
     }
+
+
 
 }

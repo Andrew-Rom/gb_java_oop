@@ -57,7 +57,7 @@ public abstract class Shooter extends Unit implements UnitsInterface {
     }
 
     public int hitPower (Unit target) {
-        int attackPower = 0;
+        int attackPower;
         if (this.position.getDist(target.position) < 5) {
             attackPower = this.causeDamage[1];
         } else if (this.position.getDist(target.position) >= 5) {
