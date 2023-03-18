@@ -7,29 +7,20 @@ public abstract class Shooter extends Unit implements UnitsInterface {
     protected int arrows;
     public int[] causeDamage;
 
-    public Shooter(int hp, int speed, int armor, int hit, String name, int arrows, int[] causeDamage, int x, int y) {
-        super(hp, speed, armor, hit, name, x, y);
+    public Shooter(String name, String type, int hp, int speed, int armor, int hit, int x, int y, int arrows, int[] causeDamage) {
+        super(name, type, hp, speed, armor, hit, x, y);
         this.arrows = arrows;
         this.causeDamage = causeDamage;
     }
 
 
-    public int getArrows() {
-        return arrows;
-    }
-
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if ((arrows > 0) && isAlive) {
-            Unit target = findNearest(targets);
+            Unit target = findTarget(targets);
             if (target.isAlive()) {
-                System.out.println("Attacker > " + this + " - can cause damage " + this.hitPower(target));
-                System.out.println("Target > " + target);
                 if (target.getArmor() < this.hitPower(target)) {
                     target.getDamage(this.hitPower(target) - target.getArmor());
-                    System.out.println("<attack was successful>");
-                } else {
-                    System.out.println("<attack was unsuccessful - armor was unbroken>");
                 }
                 arrows--;
                 for (Unit unit : attackers) {
@@ -37,23 +28,13 @@ public abstract class Shooter extends Unit implements UnitsInterface {
                         Peasant deliver = (Peasant) unit;
                         if (deliver.getDelivery()) {
                             arrows++;
-                            System.out.println("<recharged successfully by " + deliver.getNAME());
                             deliver.hasDelivery = false;
                             break;
                         }
                     }
                 }
-                if (target.isAlive()) {
-                    System.out.println("Result:\n\tattacker > " + this + "\n\ttarget > " + target + "\n");
-                } else {
-                    System.out.println("Result:\n\tattacker > " + this + "\n\ttarget > " + target + " was killed.\n");
-                }
             }
         }
-    }
-
-    public int[] getCauseDamage() {
-        return causeDamage;
     }
 
     public int hitPower (Unit target) {
@@ -70,7 +51,7 @@ public abstract class Shooter extends Unit implements UnitsInterface {
 
     @Override
     public String toString() {
-        return super.toString() + String.format("; arrows: %d", arrows);
+        return super.toString() + String.format("\t☠️%-3d\t➹%-3d", (causeDamage[0] + causeDamage[1])/2, arrows);
     }
 
 }

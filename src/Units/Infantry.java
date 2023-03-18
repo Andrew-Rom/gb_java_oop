@@ -4,29 +4,40 @@ import java.util.ArrayList;
 
 public abstract class Infantry extends Unit {
 
-    public int causeDamage;
+    public int[] causeDamage;
 
-    public Infantry(int hp, int speed, int armor, int hit, String name, int causeDamage, int x, int y) {
-        super(hp, speed, armor, hit, name, x, y);
+    public Infantry(String name, String type, int hp, int speed, int armor, int hit, int x, int y, int[] causeDamage) {
+        super(name, type, hp, speed, armor, hit, x, y);
         this.causeDamage = causeDamage;
     }
 
-//    @Override
-//    public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-//        for (Unit attacker:attackers) {
-//            if (attacker.isAlive()) {
-//                for (Unit target : targets) {
-//                    if (target.isAlive()) {
-//                        int temp = target.getHp();
-//                        System.out.println("Attacker > " + attacker);
-//                        System.out.println("Target > " + target);
-//                        target.getDamage(hit);
-//                        System.out.println("Result:\nattacker > " + attacker + "\ntarget > " + target);
-//                        if ((target.getHp() - temp) < 0) break;
-//                    }
-//                }
-//            }
-//        }
-//    }
+    @Override
+    public String toString() {
+        return super.toString() + String.format("\t☠️%-3d        ", (causeDamage[0] + causeDamage[1])/2);
+    }
+
+    @Override
+    public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        if (isAlive) {
+            Unit target = findTarget(targets);
+            if (target.isAlive()) {
+                if (target.getArmor() < this.hitPower(target)) {
+                    target.getDamage(this.hitPower(target) - target.getArmor());
+                }
+            }
+        }
+    }
+
+    public int hitPower (Unit target) {
+        int attackPower;
+        if (this.position.getDist(target.position) < 5) {
+            attackPower = this.causeDamage[1];
+        } else if (this.position.getDist(target.position) >= 5) {
+            attackPower = this.causeDamage[0];
+        } else {
+            attackPower = (this.causeDamage[0] + this.causeDamage[1]) / 2;
+        }
+        return attackPower;
+    }
 
 }

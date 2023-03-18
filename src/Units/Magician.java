@@ -1,29 +1,54 @@
 package Units;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 public abstract class Magician extends Unit {
 
     protected boolean mana;
-    protected int getDamage;
+    protected int causeDamage;
 
-    public Magician(int hp, int speed, int armor, int hit, int getDamage, String name, int x, int y) {
-        super(hp, speed, armor, hit, name, x, y);
+    public Magician(String name, String type, int hp, int speed, int armor, int hit, int x, int y, int causeDamage) {
+        super(name, type, hp, speed, armor, hit, x, y);
         this.mana = true;
-        this.getDamage = getDamage;
+        this.causeDamage = causeDamage;
     }
 
-    public boolean isMana() {
-        return mana;
-    }
-
-    public int getGetDamage() {
-        return getDamage;
+    @Override
+    public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        if (isAlive && mana) {
+            ArrayList<Unit> victims = new ArrayList<>();
+            for (Unit unit:attackers) {
+                if (!(unit.TYPE.equals("Monk")) && !(unit.TYPE.equals("Witch"))) {
+                    victims.add(unit);
+                }
+            }
+            victims.sort(new Comparator<Unit>() {
+                @Override
+                public int compare(Unit o1, Unit o2) {
+                    return o2.getHp() - o1.getHp();
+                }
+            });
+            for (Unit victim : victims) {
+                if (victim.isAlive) {
+                    healHero(victim);
+                    mana = false;
+                    break;
+                }
+            }
+        }
     }
 
     public void healHero(Unit target) {
         if (mana) {
-            target.healing(hit);
+            target.healing(causeDamage);
             mana = false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\t   \t        ";
     }
 
 }

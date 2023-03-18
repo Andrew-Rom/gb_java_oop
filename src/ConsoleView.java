@@ -49,20 +49,20 @@ public class ConsoleView {
         String str = "| ";
         boolean alive = false;
         for (int i = 0; i < Main.GANG_SIZE; i++) {
-            if (Main.teamWhite.get(i).getPos().isEquals(position))
+            if (Main.teamWhite.get(i).getPosition().isEquals(position))
             {
                 if(Main.teamWhite.get(i).getHp() == 0)
-                    str ="|"+AnsiColors.ANSI_RED+Main.teamWhite.get(i).getNAME().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
+                    str ="|"+AnsiColors.ANSI_RED+Main.teamWhite.get(i).getTYPE().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
                 else {
-                    str ="|"+AnsiColors.ANSI_GREEN+Main.teamWhite.get(i).getNAME().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
+                    str ="|"+AnsiColors.ANSI_GREEN+Main.teamWhite.get(i).getTYPE().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
                     alive = true;
                 }
             }
-            if (Main.teamBlack.get(i).getPos().isEquals(position) && !alive)
+            if (Main.teamBlack.get(i).getPosition().isEquals(position) && !alive)
             {
                 if(Main.teamBlack.get(i).getHp() == 0)
-                    str ="|"+AnsiColors.ANSI_RED+ Main.teamBlack.get(i).getNAME().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
-                else str ="|"+AnsiColors.ANSI_BLUE+ Main.teamBlack.get(i).getNAME().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
+                    str ="|"+AnsiColors.ANSI_RED+ Main.teamBlack.get(i).getTYPE().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
+                else str ="|"+AnsiColors.ANSI_BLUE+ Main.teamBlack.get(i).getTYPE().toUpperCase().charAt(0)+AnsiColors.ANSI_RESET;
             }
         }
         return str;
