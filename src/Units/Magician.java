@@ -18,7 +18,7 @@ public abstract class Magician extends Unit {
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if (isAlive && mana) {
             ArrayList<Unit> victims = new ArrayList<>();
-            for (Unit unit:attackers) {
+            for (Unit unit : attackers) {
                 if (!(unit.TYPE.equals("Monk")) && !(unit.TYPE.equals("Witch"))) {
                     victims.add(unit);
                 }
@@ -26,7 +26,7 @@ public abstract class Magician extends Unit {
             victims.sort(new Comparator<Unit>() {
                 @Override
                 public int compare(Unit o1, Unit o2) {
-                    return o2.getHp() - o1.getHp();
+                    return o1.getHp() - o2.getHp();
                 }
             });
             for (Unit victim : victims) {

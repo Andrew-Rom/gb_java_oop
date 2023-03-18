@@ -37,7 +37,7 @@ public abstract class Shooter extends Unit implements UnitsInterface {
         }
     }
 
-    public int hitPower (Unit target) {
+    public int hitPower(Unit target) {
         int attackPower;
         if (this.position.getDist(target.position) < 5) {
             attackPower = this.causeDamage[1];
@@ -51,7 +51,7 @@ public abstract class Shooter extends Unit implements UnitsInterface {
 
     @Override
     public String toString() {
-        return super.toString() + String.format("\t☠️%-3d\t➹%-3d", (causeDamage[0] + causeDamage[1])/2, arrows);
+        return super.toString() + String.format("\t☠️%-3d\t➹%-3d", (causeDamage[0] + causeDamage[1]) / 2, arrows);
     }
 
 }

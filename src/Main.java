@@ -18,8 +18,7 @@ public class Main {
             Init.makeStep();
             scanner.nextLine();
         }
-        
-    }
 
+    }
 
 }

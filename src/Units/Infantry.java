@@ -20,10 +20,10 @@ public abstract class Infantry extends Unit {
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if (isAlive) {
             Unit target = findTarget(targets);
-            if (target.isAlive()) {
-                if (target.getArmor() < this.hitPower(target)) {
-                    target.getDamage(this.hitPower(target) - target.getArmor());
-                }
+            if (target.getArmor() < this.hit) {
+                target.getDamage(this.hitPower(target));
+            } else {
+                target.getDamage(this.hitPower(target) / 2);
             }
         }
     }
