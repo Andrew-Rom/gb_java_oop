@@ -18,19 +18,19 @@ public abstract class Shooter extends Unit implements UnitsInterface {
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if ((arrows > 0) && isAlive) {
             Unit target = findTarget(targets);
-            if (target.isAlive()) {
-                if (target.getArmor() < this.hitPower(target)) {
-                    target.getDamage(this.hitPower(target) - target.getArmor());
-                }
-                arrows--;
-                for (Unit unit : attackers) {
-                    if (unit.getInfo().equals("Peasant")) {
-                        Peasant deliver = (Peasant) unit;
-                        if (deliver.getDelivery()) {
-                            arrows++;
-                            deliver.hasDelivery = false;
-                            break;
-                        }
+            if (target.getArmor() < this.hit) {
+                target.getDamage(this.hitPower(target));
+            } else {
+                target.getDamage(this.hitPower(target) / 2);
+            }
+            arrows--;
+            for (Unit unit : attackers) {
+                if (unit.getInfo().equals("Peasant")) {
+                    Peasant deliver = (Peasant) unit;
+                    if (deliver.getDelivery()) {
+                        arrows++;
+                        deliver.hasDelivery = false;
+                        break;
                     }
                 }
             }

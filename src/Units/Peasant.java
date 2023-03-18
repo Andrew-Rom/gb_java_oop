@@ -22,7 +22,7 @@ public class Peasant extends Unit {
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        if (isAlive) System.out.println("The Peasant made a step.");
+        if (isAlive) System.out.print(' ');
     }
 
     @Override

@@ -30,6 +30,7 @@ public abstract class Unit implements UnitsInterface {
         if (hp > damage) {
             hp = hp - damage;
         } else {
+            hp = 0;
             isAlive = false;
         }
     }
@@ -77,10 +78,12 @@ public abstract class Unit implements UnitsInterface {
         float minDist = 10;
         int index = 0;
         for (int i = 0; i < team.size(); i++) {
-            float dist = team.get(i).position.getDist(team.get(i).position);
-            if (dist < minDist) {
-                minDist = dist;
-                index = i;
+            if (team.get(i).isAlive()) {
+                float dist = team.get(i).position.getDist(team.get(i).position);
+                if (dist < minDist) {
+                    minDist = dist;
+                    index = i;
+                }
             }
         }
         return team.get(index);
