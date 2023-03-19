@@ -12,15 +12,15 @@ public class ConsoleView {
         if (step++ == 0) {
             System.out.print(AnsiColors.ANSI_RED+"First step!"+AnsiColors.ANSI_RESET);
             System.out.print(AnsiColors.ANSI_GREEN +
-                    String.join("", Collections.nCopies(20, formatDiv(" "))) + "Green Team" + AnsiColors.ANSI_RESET);
+                    String.join("", Collections.nCopies(20, formatDiv(" "))) + "White Team" + AnsiColors.ANSI_RESET);
             System.out.println(AnsiColors.ANSI_BLUE +
-                    String.join("", Collections.nCopies(55, formatDiv(" "))) + "Blue Team" + AnsiColors.ANSI_RESET);
+                    String.join("", Collections.nCopies(55, formatDiv(" "))) + "Black Team" + AnsiColors.ANSI_RESET);
         } else {
             System.out.print(AnsiColors.ANSI_RED + "Step: "+step+AnsiColors.ANSI_RESET);
             System.out.print(AnsiColors.ANSI_GREEN +
-                    String.join("", Collections.nCopies(20, formatDiv(" "))) + "Green Team" + AnsiColors.ANSI_RESET);
+                    String.join("", Collections.nCopies(20, formatDiv(" "))) + "White Team" + AnsiColors.ANSI_RESET);
             System.out.println(AnsiColors.ANSI_BLUE +
-                    String.join("", Collections.nCopies(55, formatDiv(" "))) + "Blue Team" + AnsiColors.ANSI_RESET);
+                    String.join("", Collections.nCopies(55, formatDiv(" "))) + "Black Team" + AnsiColors.ANSI_RESET);
         }
 
         System.out.println(ConsoleView.top10);

@@ -30,9 +30,9 @@ public abstract class Infantry extends Unit {
 
     public int hitPower (Unit target) {
         int attackPower;
-        if (this.position.getDist(target.position) < 5) {
+        if (this.position.getDist(target.position) <= 1) {
             attackPower = this.causeDamage[1];
-        } else if (this.position.getDist(target.position) >= 5) {
+        } else if (this.position.getDist(target.position) == 2) {
             attackPower = this.causeDamage[0];
         } else {
             attackPower = (this.causeDamage[0] + this.causeDamage[1]) / 2;

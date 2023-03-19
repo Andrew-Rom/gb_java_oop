@@ -19,7 +19,7 @@ public abstract class Magician extends Unit {
         if (isAlive && mana) {
             ArrayList<Unit> victims = new ArrayList<>();
             for (Unit unit : attackers) {
-                if (!(unit.TYPE.equals("Monk")) && !(unit.TYPE.equals("Witch"))) {
+                if (!(unit.TYPE.equals("Monk")) && !(unit.TYPE.equals("Witch")) && !(unit.TYPE.equals("Peasant"))) {
                     victims.add(unit);
                 }
             }
@@ -30,7 +30,7 @@ public abstract class Magician extends Unit {
                 }
             });
             for (Unit victim : victims) {
-                if (victim.isAlive) {
+                if (victim.isAlive()) {
                     healHero(victim);
                     mana = false;
                     break;

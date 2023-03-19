@@ -32,11 +32,9 @@ public class Init {
     }
 
     public static void makeStep() {
-        for (Unit unitWhite : Main.teamWhite) {
-            unitWhite.step(Main.teamWhite, Main.teamBlack);
-        }
-        for (Unit unitBlack : Main.teamBlack) {
-            unitBlack.step(Main.teamBlack, Main.teamWhite);
+        for (int i = 0; i < Main.GANG_SIZE; i++) {
+            Main.teamWhite.get(i).step(Main.teamWhite, Main.teamBlack);
+            Main.teamBlack.get(i).step(Main.teamBlack, Main.teamWhite);
         }
     }
 

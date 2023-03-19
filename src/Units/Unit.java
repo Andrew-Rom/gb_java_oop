@@ -26,17 +26,9 @@ public abstract class Unit implements UnitsInterface {
         position = new Position(x, y);
     }
 
-    public void getDamage(int damage) {
-        if (hp > damage) {
-            hp = hp - damage;
-        } else {
-            hp = 0;
-            isAlive = false;
-        }
-    }
 
-    public String getNAME() {
-        return NAME;
+    public String getTYPE() {
+        return TYPE;
     }
 
     public int getHp() {
@@ -57,6 +49,15 @@ public abstract class Unit implements UnitsInterface {
 
     public Position getPosition() {
         return position;
+    }
+
+    public void getDamage(int damage) {
+        if (hp > damage) {
+            hp = hp - damage;
+        } else {
+            hp = 0;
+            isAlive = false;
+        }
     }
 
     @Override
@@ -89,7 +90,4 @@ public abstract class Unit implements UnitsInterface {
         return team.get(index);
     }
 
-    public String getTYPE() {
-        return TYPE;
-    }
 }
