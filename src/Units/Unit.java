@@ -4,30 +4,58 @@ import java.util.ArrayList;
 
 public abstract class Unit implements UnitsInterface {
 
+    protected final String NAME;
+    protected final String TYPE;
     protected int hp;
     protected int maxHp;
     protected int speed;
     protected int armor;
     protected int hit;
     protected boolean isAlive = true;
-    protected final String NAME;
     protected Position position;
 
 
-    public Unit(int hp, int speed, int armor, int hit, String name, int x, int y) {
+    public Unit(String name, String type, int hp, int speed, int armor, int hit, int x, int y) {
+        NAME = name;
+        TYPE = type;
         this.hp = hp;
         this.maxHp = hp;
         this.speed = speed;
         this.armor = armor;
         this.hit = hit;
-        NAME = name;
         position = new Position(x, y);
+    }
+
+
+    public String getTYPE() {
+        return TYPE;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getArmor() {
+        return armor;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
+    public Position getPosition() {
+        return position;
     }
 
     public void getDamage(int damage) {
         if (hp > damage) {
             hp = hp - damage;
         } else {
+            hp = 0;
             isAlive = false;
         }
     }
@@ -37,34 +65,9 @@ public abstract class Unit implements UnitsInterface {
         hp = Math.min(hp + addHp, maxHp);
     }
 
-    public boolean isAlive() {
-        return isAlive;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public String getNAME() {
-        return NAME;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public int getArmor() {
-        return armor;
-    }
-
-    public String getPosition() {
-        return String.format("x = % d, y = %d", position.getX(), position.getY());
-    }
-
-
     @Override
     public String toString() {
-        return String.format("Name: %s = HP: %d/%d; armor: %d", NAME, hp, maxHp, armor);
+        return String.format("\t%-12s\t⚔️ %-3d\t\uD83D\uDEE1 %-3d\t♥️%-3d%%", TYPE, hit, armor, (hp * 100 / maxHp));
     }
 
     @Override
@@ -72,14 +75,16 @@ public abstract class Unit implements UnitsInterface {
         return o1.getSpeed() - o2.getSpeed();
     }
 
-    protected Unit findNearest(ArrayList<Unit> team) {
+    protected Unit findTarget(ArrayList<Unit> team) {
         float minDist = 10;
         int index = 0;
         for (int i = 0; i < team.size(); i++) {
-            float dist = team.get(i).position.getDist(team.get(i).position);
-            if (dist < minDist) {
-                minDist = dist;
-                index = i;
+            if (team.get(i).isAlive()) {
+                float dist = team.get(i).position.getDist(team.get(i).position);
+                if (dist < minDist) {
+                    minDist = dist;
+                    index = i;
+                }
             }
         }
         return team.get(index);

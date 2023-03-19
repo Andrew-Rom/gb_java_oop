@@ -5,18 +5,15 @@ import java.util.ArrayList;
 public class Peasant extends Unit {
 
     protected boolean hasDelivery;
-    protected int causeDamage;
 
-    public Peasant(int hp, int speed, int armor, int hit, int causeDamage, String name, boolean hasDelivery, int x, int y) {
-        super(hp, speed, armor, hit, name, x, y);
+    public Peasant(String name, String type, int hp, int speed, int armor, int hit, int x, int y, boolean hasDelivery) {
+        super(name, type, hp, speed, armor, hit, x, y);
         this.hasDelivery = hasDelivery;
-        this.causeDamage = causeDamage;
     }
 
     public Peasant(String name, int x, int y) {
-        this(1, 3, 1, 1, 1,name,true, x, y);
+        this(name, "Peasant", 1, 3, 1, 1, x, y,true);
     }
-
 
 
     public boolean getDelivery() {
@@ -25,7 +22,7 @@ public class Peasant extends Unit {
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        if (isAlive) System.out.println("The Peasant made a step.");
+        if (isAlive) System.out.print(' ');
     }
 
     @Override
@@ -35,7 +32,6 @@ public class Peasant extends Unit {
 
     @Override
     public String toString() {
-        return super.toString() + "; type: Peasant";
+        return super.toString() + "                ";
     }
-
 }

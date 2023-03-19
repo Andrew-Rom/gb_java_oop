@@ -3,7 +3,7 @@ package Units;
 import java.util.ArrayList;
 
 public interface UnitsInterface {
-    void step(ArrayList<Unit> attackers, ArrayList<Unit> target);
+    void step(ArrayList<Unit> attackers, ArrayList<Unit> targets);
 
     String getInfo();
 
