@@ -16,8 +16,10 @@ public class Init {
                     Main.teamBlack.add(new Witch(getName(), 10, i));
                 }
                 case 1 -> {
-                    Main.teamWhite.add(new XBowMan(getName(), 1, i));
-                    Main.teamBlack.add(new Sniper(getName(), 10, i));
+//                    Main.teamWhite.add(new XBowMan(getName(), 1, i));
+//                    Main.teamBlack.add(new Sniper(getName(), 10, i));
+                    Main.teamWhite.add(new Spearman(getName(), 1, i));
+                    Main.teamBlack.add(new Bandit(getName(), 10, i));
                 }
                 case 2 -> {
                     Main.teamWhite.add(new Spearman(getName(), 1, i));

@@ -20,11 +20,14 @@ public abstract class Infantry extends Unit {
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if (isAlive) {
             Unit target = findTarget(targets);
-            if (target.getArmor() < this.hit) {
-                target.getDamage(this.hitPower(target));
-            } else {
-                target.getDamage(this.hitPower(target) / 2);
+            if (position.getDist(target.position) <= 1) {
+                if (target.getArmor() < this.hit) {
+                    target.getDamage(this.hitPower(target));
+                } else {
+                    target.getDamage(this.hitPower(target) / 2);
+                }
             }
+            move(target, attackers);
         }
     }
 
@@ -38,6 +41,46 @@ public abstract class Infantry extends Unit {
             attackPower = (this.causeDamage[0] + this.causeDamage[1]) / 2;
         }
         return attackPower;
+    }
+
+    public void move (Unit unitAim, ArrayList<Unit>friends) {
+        Position temp = this.position;
+        int dX = this.position.getX() - unitAim.position.getX();
+        int dY = this.position.getY() - unitAim.position.getY();
+        if (Math.abs(dX) >= Math.abs(dY)) {
+            if (dX > 0) {
+                temp.setX(temp.getX() - 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setX(this.position.getX() - 1);
+                }
+            } else {
+                temp.setX(temp.getX() + 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setX(this.position.getX() + 1);
+                }
+            }
+        } else {
+            if (dY > 0) {
+                temp.setY(temp.getY() - 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setY(this.position.getY() - 1);
+                }
+            } else {
+                temp.setY(temp.getY() + 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setY(this.position.getY() + 1);
+                }
+            }
+        }
+    }
+
+    public boolean checkCells (Position newPosition, ArrayList<Unit> friends) {
+        for (Unit friend:friends) {
+            if (newPosition.isEquals(friend.position)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

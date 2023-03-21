@@ -53,7 +53,7 @@ public abstract class Unit implements UnitsInterface {
 
     public void getDamage(int damage) {
         if (hp > damage) {
-            hp = hp - damage;
+            hp = this.hp - damage;
         } else {
             hp = 0;
             isAlive = false;

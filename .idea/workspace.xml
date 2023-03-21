@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Changed selection targets for healing. Changed calculation power of attack.">
-      <change beforePath="$PROJECT_DIR$/src/Вывод" beforeDir="false" />
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Deleted help file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Init.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson4" />
+        <entry key="$PROJECT_DIR$" value="lesson5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,14 +63,14 @@
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -244,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679216706234</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Deleted help file">
+      <created>1679216837559</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679216837559</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,6 +293,7 @@
     <MESSAGE value="Fixed hp calculation and selection target" />
     <MESSAGE value="Changed selection target" />
     <MESSAGE value="Changed selection targets for healing. Changed calculation power of attack." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed selection targets for healing. Changed calculation power of attack." />
+    <MESSAGE value="Deleted help file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted help file" />
   </component>
 </project>
