@@ -56,4 +56,11 @@ public class Init {
         return UnitsNames.values()[new Random().nextInt(UnitsNames.values().length)].toString();
     }
 
+    public static boolean teamIsAlive(ArrayList<Unit>team) {
+        for (Unit unit:team) {
+            if (unit.isAlive()) return true;
+        }
+        return false;
+    }
+
 }

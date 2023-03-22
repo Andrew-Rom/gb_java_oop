@@ -13,7 +13,7 @@ public class Main {
         Init.createTeams();
 
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        while (Init.teamIsAlive(teamWhite) && Init.teamIsAlive(teamBlack)) {
             ConsoleView.view();
             Init.makeStep();
             scanner.nextLine();
