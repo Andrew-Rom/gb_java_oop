@@ -20,7 +20,7 @@ public abstract class Infantry extends Unit {
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
         if (isAlive) {
             Unit target = findTarget(targets);
-            if (position.getDist(target.position) <= 1) {
+            if (position.getDist(target.position) <= 2) {
                 if (target.getArmor() < this.hit) {
                     target.getDamage(this.hitPower(target));
                 } else {
@@ -35,10 +35,8 @@ public abstract class Infantry extends Unit {
         int attackPower;
         if (this.position.getDist(target.position) <= 1) {
             attackPower = this.causeDamage[1];
-        } else if (this.position.getDist(target.position) == 2) {
-            attackPower = this.causeDamage[0];
         } else {
-            attackPower = (this.causeDamage[0] + this.causeDamage[1]) / 2;
+            attackPower = this.causeDamage[0];
         }
         return attackPower;
     }
