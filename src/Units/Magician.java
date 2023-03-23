@@ -29,6 +29,7 @@ public abstract class Magician extends Unit {
                     return o1.getHp() - o2.getHp();
                 }
             });
+
             for (Unit victim : victims) {
                 if (victim.isAlive()) {
                     healHero(victim);

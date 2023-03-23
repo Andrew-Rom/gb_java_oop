@@ -13,35 +13,26 @@ public abstract class Infantry extends Unit {
 
     @Override
     public String toString() {
-        return super.toString() + String.format("\t☠️%-3d        ", (causeDamage[0] + causeDamage[1])/2);
+        return super.toString() + String.format("\t☠️%-3d        ", (causeDamage[0] + causeDamage[1]) / 2);
     }
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
+        Unit target = findTarget(targets);
         if (isAlive) {
-            Unit target = findTarget(targets);
-            if (position.getDist(target.position) <= 2) {
+            if (position.getDist(target.position) < 1.5) {
                 if (target.getArmor() < this.hit) {
-                    target.getDamage(this.hitPower(target));
+                    target.getDamage(causeDamage[1]);
                 } else {
-                    target.getDamage(this.hitPower(target) / 2);
+                    target.getDamage(causeDamage[0]);
                 }
+            } else {
+                this.move(target, attackers);
             }
-            move(target, attackers);
         }
     }
 
-    public int hitPower (Unit target) {
-        int attackPower;
-        if (this.position.getDist(target.position) <= 1) {
-            attackPower = this.causeDamage[1];
-        } else {
-            attackPower = this.causeDamage[0];
-        }
-        return attackPower;
-    }
-
-    public void move (Unit unitAim, ArrayList<Unit>friends) {
+    public void move(Unit unitAim, ArrayList<Unit> friends) {
         Position temp = this.position;
         int dX = this.position.getX() - unitAim.position.getX();
         int dY = this.position.getY() - unitAim.position.getY();
@@ -72,11 +63,9 @@ public abstract class Infantry extends Unit {
         }
     }
 
-    public boolean checkCells (Position newPosition, ArrayList<Unit> friends) {
-        for (Unit friend:friends) {
-            if (newPosition.isEquals(friend.position)) {
-                return false;
-            }
+    public boolean checkCells(Position newPosition, ArrayList<Unit> friends) {
+        for (Unit friend : friends) {
+            if (newPosition.isEquals(friend.position)) return false;
         }
         return true;
     }

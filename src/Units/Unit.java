@@ -76,11 +76,11 @@ public abstract class Unit implements UnitsInterface {
     }
 
     protected Unit findTarget(ArrayList<Unit> team) {
-        float minDist = 10;
+        float minDist = 13;
         int index = 0;
         for (int i = 0; i < team.size(); i++) {
             if (team.get(i).isAlive()) {
-                float dist = team.get(i).position.getDist(team.get(i).position);
+                float dist = position.getDist(team.get(i).position);
                 if (dist < minDist) {
                     minDist = dist;
                     index = i;
