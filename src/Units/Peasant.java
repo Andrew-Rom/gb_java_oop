@@ -32,6 +32,10 @@ public class Peasant extends Unit {
 
     @Override
     public String toString() {
-        return super.toString() + "                ";
+        if (hasDelivery) {
+            return super.toString() + "\t➷            ";
+        } else {
+            return super.toString() + "\t✖            ";
+        }
     }
 }

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Modded healing method">
+    <list default="true" id="a7c7c23e-3254-465d-8d4f-b2c90de0b43c" name="Changes" comment="Added variable status of mana. Changed healing method. Added recovering action. Added showing info about magicians.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Magician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679551692669</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added variable status of mana. Changed healing method. Added recovering action. Added showing info about magicians.">
+      <created>1679673080415</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1679673080415</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,7 +324,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Overrode implemented methods step() and getInfo()." />
     <MESSAGE value="Added method attack() into InitsInterface, overrode implemented method, deleted another attack methods." />
     <MESSAGE value="Added character's name" />
     <MESSAGE value="Made 2 teams and got type of each member." />
@@ -342,6 +348,7 @@
     <MESSAGE value="Changed calculation of infantry hit power" />
     <MESSAGE value="Fixed skipping attack" />
     <MESSAGE value="Modded healing method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modded healing method" />
+    <MESSAGE value="Added variable status of mana. Changed healing method. Added recovering action. Added showing info about magicians." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added variable status of mana. Changed healing method. Added recovering action. Added showing info about magicians." />
   </component>
 </project>
