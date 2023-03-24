@@ -5,18 +5,18 @@ import java.util.Comparator;
 
 public abstract class Magician extends Unit {
 
-    protected boolean mana;
+    protected int mana;
     protected int causeDamage;
 
     public Magician(String name, String type, int hp, int speed, int armor, int hit, int x, int y, int causeDamage) {
         super(name, type, hp, speed, armor, hit, x, y);
-        this.mana = true;
+        this.mana = 100;
         this.causeDamage = causeDamage;
     }
 
     @Override
     public void step(ArrayList<Unit> attackers, ArrayList<Unit> targets) {
-        if (isAlive && mana) {
+        if (isAlive && (mana > 0)) {
             ArrayList<Unit> victims = new ArrayList<>();
             for (Unit unit : attackers) {
                 if (!(unit.TYPE.equals("Monk")) && !(unit.TYPE.equals("Witch")) && !(unit.TYPE.equals("Peasant"))) {
@@ -33,7 +33,11 @@ public abstract class Magician extends Unit {
             for (Unit victim : victims) {
                 if (victim.isAlive() && victim.hp < victim.maxHp) {
                     healHero(victim);
-                    mana = false;
+                    break;
+                } else if (!victim.isAlive() && mana >= 50) {
+                    victim.isAlive = true;
+                    victim.hp = maxHp;
+                    mana = mana - 50;
                     break;
                 }
             }
@@ -41,15 +45,18 @@ public abstract class Magician extends Unit {
     }
 
     public void healHero(Unit target) {
-        if (mana) {
+        if (mana >= causeDamage) {
             target.healing(causeDamage);
-            mana = false;
+            mana = mana - causeDamage;
+        } else {
+            target.healing(mana);
+            mana = 0;
         }
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\t   \t        ";
+        return super.toString() + String.format("\t★%-3d\t⛨%-3d", causeDamage, mana);
     }
 
 }
